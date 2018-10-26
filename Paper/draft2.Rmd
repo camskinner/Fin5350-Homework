@@ -1,0 +1,66 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ./svm-latex-ms.tex
+title: "Agent-Based Modeling: What Computational Economists Should Do"
+author:
+- name: Cameron Skinner
+  affiliation: Jon M. Huntsman School of Business | Utah State University 
+abstract: "In this article ..."
+keywords: "Agent-based modeling, computer simulations, reinforcement learning, artificial intelligence, game theory"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+spacing: double
+bibliography: ./master.bib
+biblio-style: apsr
+---
+
+
+>  
+
+# _What Should Economists Do?_ By James Buchanan
+
+Buchanan's main point is that economics should study _the theory of markets_ and leave _the theory of resource allocation_ to applied mathematicians. He subscribes to methodological individualism, which implies that social phenomena is explained by actions and behaviors of individual agents. Exchange, trade, and agreement are what economists should be focused on studying rather than choice and allocation maximization. In supporting his argument, Buchanan states that economics should be referred to as _catallactics_ or _symbiotics_; catallactics is defined as the science of exchange and symbiotics connotes a mutually beneficial relationship between dissimilar organisms. This view of economics would urge economists to place emphasis on the more important areas of their practice
+
+# Essay Topic
+
+I agree with Buchanan's assertion and propose that computational economists should take a similar approach. My intention is to convey that some current economic models are too constraining, and agent-based modeling reduces those constraints. The title of my paper is _Agent-Based Modeling: What Computational Economists Should Do_, in which I will discuss how agent-based modeling enables economists to develop models that can evolve and adapt as the individual and interacting agents of the economy vary in behavior and exchange. In the paper I will address topics such as inductive and reinforced learning, artificial intelligence, decision theory, and game theory. 
+
+# Brief Lit Review
+
+_A Plea for (Good) Simulations: Nudging Economics Toward an Experimental Science_ By Julian Reiss @Reiss2011
+
+In this article, the author argues that simulation is an undervalued technique to draw
+conclusions about empirical phenomena in economics. Reiss discusses that models are prevalent in economics but simulations are rare. He addresses the fallacies in the arguments against simulations.
+
+_Using Simulation to Better Understand Price Determination in a Nonfrictionless Equity Market_ By Jian Hua, Robert A. Schwartz, and Gregory Sipress @Hua2017
+
+This article focuses on simulation analysis. In a laboratory-type environment, simulation can generate data that enable a complex nonfrictionless environment that might not otherwise be attainable. The authors explain that a simulation necessitates two elements: (1) replicate reality with sufficient accuracy and (2) yield insights that are not readily achievable by more standard analysis.
+
+_Options Arbitrage in Imperfect Markets_ By Stephen Figlewski @Figlewski1989
+
+This paper simulates the impact of market imperfections and other problems with the "standard" arbitrage trade, including uncertain volatility, transactions costs, indivisibilities, and rebalancing only at discrete intervals.
+
+_Information and Competitive Price Systems_ By Sanford J. Grossman and Joseph E. Stiglitz @Grossman1976
+
+This article addresses how informational efficiency of the price system can be evaluated.
+
+_Agent-based computational economics: modeling economies as complex adaptive systems_ By Leigh Tesfatsion @Tesfatsion2003
+
+This paper outlines the main objectives and characteristics of agent-based computational economics methodology.
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
