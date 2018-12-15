@@ -1,0 +1,86 @@
+---
+title: 'Agent-Based Modeling: What Computational Economists Should Do'
+author:
+- affiliation: Jon M. Huntsman School of Business | Utah State University
+  name: Cameron Skinner
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+    template: ./svm-latex-ms.tex
+  word_document: default
+biblio-style: apsr
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin=1in
+keywords: Agent-based modeling, computer simulations, reinforcement learning
+bibliography: ./master.bib
+spacing: double
+abstract: This paper discusses how agent-based modeling enables economists to develop
+  models that can evolve and adapt as the individual and interacting agents of the
+  economy vary in behavior and exchange.
+---
+
+
+>  
+
+# Introduction
+
+While mathematical models may provide useful tools to make assertions about economics, I argue that these sorts of models lead to overconstraining and incomplete conclusions. Advancement of technology and simulation capabilities have made more accurate and less constraining methods possible for economists. Agent-based modeling, involving computer simulations, reinforcement learning, and aspects of game and decision theory, enables economists to construct models that evolve and adapt to more holistically reflect the varying behavior and exchange among individual and interacting agents in an economy.
+
+# _What Should Economists Do?_
+
+Buchanan's main point in his 1964 paper titled _What Should Economists Do?_, is that economics should study _the theory of markets_ and leave _the theory of resource allocation_ to applied mathematicians. He subscribes to methodological individualism, which implies that social phenomena is explained by actions and behaviors of individual agents. Exchange, trade, and agreement are what economists should be focused on studying rather than choice and allocation maximization. In supporting his argument, Buchanan states that economics should be referred to as _catallactics_ or _symbiotics_; catallactics is defined as the science of exchange and symbiotics connotes a mutually beneficial relationship between dissimilar organisms. This symbiotics approach urges economists to place emphasis on the more important areas of their practice: propensity to truck, barter, and exchange, as Adam Smith describes in _Wealth of Nations_..
+
+“Economists "should" concentrate their attention on a particular form of human activity, and upon the various institutional arrangements that arise as a result of this form of activity. Man's behavior in the market relationship, reflecting the propensity to truck and to barter, and the manifold variations in structure that this relationship can take; these are the proper subjects for the economist's study.” @Buchanan1964
+
+I agree with Buchanan's assertion and propose that computational economists should take a similar approach. They need to move away from strictly mathematical models, which as Buchanan mentioned, correspond to the practice of  applied mathematicians. Computational economists need to engage in the study of exchange, behavior of autonomous, adaptive, interacting agents, and how these agents compose an interacting network. Mathematical models tend to employ stringent constraints that call for unrealistic assumptions. Agent-based models that use simulations and reinforcement learning, which will be discussed later in the paper, incorporate the behavior of individual and interacting agents and allow for evolution due to reduced limitations that mathematical models generally impose.
+
+# Constriction of Mathematical Models
+
+Hua, Schwartz, and Sipress quoted Focardi and Fabozzi who said, “The challenge to universities and business schools is to teach students to reason rigorously without constraining the teaching to a straightjacket of calculus.” @Hua2017 Focardi and Fabozzi are, in essence, claiming that math should not overpower or supersede one’s logic or ability to reason. Tesfatsion explains that mathematical models place heavy reliance on “extraneous coordination devices,” including fixed decision rules, common knowledge assumptions, representative agents, and imposed market equilibrium constraints. The types of interactions that take place in the real world typically have no place in these constrained models. Basically, agents represented in these models are extremely rigid and have little room for adaptation. It is important to note that incorporating these interactions into economic models can be costly, especially when the models involve running real experiments. While these factors may be difficult to reflect in many traditional quantitative models, there are reasonable and effective alternatives to integrating them that will be addressed further along. @Tesfatsion2003
+
+Furthermore, these models generally assume a perfect world, which creates a critical flaw because events like economic crises play no role in the structure of the models. Another assumption made by many models that can create issues in terms of accurate price determination is that markets are frictionless. Grossman and Stiglitz’s 1976 paper on price information in an equity market serves as a valuable baseline in modeling prices and the transfer of information, but a critical assumption made in this model is that markets are frictionless. Hua, Schwartz, and Sipress published a paper in 2017 that builds off of Grossman and Stiglitz’s model to “introduce several realities that bring the analysis closer to a real-world environment.” Hua, et al. make the argument that, while mathematical models serve a purpose, it is vital to maintain in perspective the importance of making appropriate assumptions because extraneous assumptions can jeopardize the integrity of the model. For example, the assumption that markets are frictionless may cause the “baby to be thrown out with the bath water” because, in reality, markets are not frictionless, and that market characteristic plays a significant role in market outcomes. To reflect this element of market friction, they develop a simulation and show how it has the power to shed further light on the determination of prices in a more complex environment. These types of simulations are what computational economists should utilize in order to develop accurate, effective, adaptive, exchange-driven models. @Hua2017
+
+# What is Agent-Based Modeling?
+
+Agent-based modeling (ABM) consists of a system that is modeled as a collection of independent, autonomous decision-making entities referred to as agents. In these models, agents have the capability to execute various behaviors such as consuming, producing, or selling, for example. ABM relies on the power of computers being able to explore the dynamics and nuances that exist in the interactions among agents that purely mathematical models are incapable of extrapolating. These models are intended to emulate real-world dynamics and incorporate the emergence of unanticipated behavior. More advanced ABMs often contain elements of neural networks, evolutionary algorithms, and sophisticated machine learning techniques. The principal benefits of ABMs over other modeling techniques are threefold: (i) the capturing of emergent phenomena; (ii) the provision of a natural description of a system; and (iii) flexibility. @Bonabeau2002
+
+_AMBs capture emergent phenomena._ In a system comprised of individual entities, the whole is more than simply the sum of its subsequent parts because of the interaction among agents. This _“one plus one equals three effect”_ creates a sense of unpredictability around the system, resulting in unanticipated elements or emergent phenomena. Mathematical models using differential equations are incapable of capturing this phenomena because of the behaviors, interactions, and nuances that emerge from the system. Agent-based models are better positioned to encapsulate the nonlinear individual behavior of agents using thresholds, if-then rules, and nonlinear coupling. ABMs also allow the agents to exhibit “memory, path-dependence, and hysteresis, non-markovian behavior, or temporal correlations, including learning and adaptation.” Additionally, ABMs are capable of amplifying fluctuations where aggregate differential equations generally exhibit smooth fluctuations. This allows the system to be “linearly stable but unstable to larger perturbations,” which can be exceptionally valuable in volatile systems like the stock market. @Bonabeau2002
+
+_ABMs provide a natural description of a system._ An example will be helpful in illustrating how agent-based modeling provides a more natural description of how a system works. For instance, deriving the path through which shoppers move at a grocery store is more natural than developing a set of equations that “govern the dynamics of the density of shoppers.” Data from the store like panel data and customer surveys can be more fully leveraged because it shows what the shoppers actually do and what behavioral tendencies they may have. This enables the model to create multiple virtual agents with distinct shopping baskets as opposed to a synthetic shopping basket compiled from the averages over shopping data. ABMs can be especially useful when behavior of agents cannot be clearly defined through aggregate models. Individual behavior is often complex and can become intractable with representation through differential equations. Also, ABMs use activities as opposed to processes to describe systems. This helps the models develop relatability since humans generally understand systems as activities of autonomous units. @Bonabeau2002
+
+_ABMs accommodate flexibility._ Adding more agents to an agent-based model is very simple. Establishing interaction rules, behavior complexity, rationality, and learning and evolving abilities becomes easy and natural in the model’s framework. Agents can be given various interaction criteria to engage with other single agents, groups of agents, and subgroups of agents. These models are not restricted by excessive limitations and assumptions, so the system is free to learn, adapt, and evolve as the model progresses. @Bonabeau2002
+
+As described, ABMs serve as accurate representations of real-world systems because focus is placed on the exchange and interaction among constituent units, which compose the building blocks of an economy. These models allow rational evidence-based investigation to be performed on aspects of an economy that may be difficult to analyze via traditional empirical methods. Another key element that expounds upon the benefits already addressed is the concept of simulation.
+
+# Simulations
+
+In his 2011 paper, Reiss argues that computer simulations can help economics become a “full-fledged experimental science.” He states, “Simulations in economics explore the properties of computer-implemented models; they are aimed at drawing inferences about properties of a socioeconomic system or socioeconomic systems of interest.” Simulations are vital to agent-based modeling, in that they allow for experimentation and repetition in a more cheap and efficient manner than lab experimentations. The two main objectives of computer simulations are the following: (i) replicate reality with sufficient accuracy and (ii) yield insights that are not readily achievable by more standard analysis @Hua2017. The running of simulations also allows the agents in the model to build memory, learn, and adapt in their environment, which results in realistic, evidence-based outcomes. Reinforcement learning in simulations is key because it enables each constituent unit to become unique and operate with its own independent behavior, which more accurately reflects the dynamics of an economy @Reiss2011. Advantages of simulations over traditional mathematical models are listed here:
+
+*   The possibility of precise replication
+*   Expanded flexibility (i.e., the possibility of varying parameters that cannot be varied in nature)
+*   Dramatically reduced costs, both financial and ethical
+*   Improved speed of implementation
+
+Reiss cites that publications including the word simulation and its declensions in the title or abstract has increased by about 4.4 percent annually since 2000. This growth in simulation interest is promising, but it does not necessarily mean that simulations are widely employed in the economic profession. The share of “simulation articles” among all articles in economics is still below 3 percent. Reiss argues that the epistemology of simulation is the same epistemology of experiments, so more economists should be inclined to employ simulations in their models. Critics of using simulation in their models argue that simulation delivers neither certainty nor understanding but mathematical models do. They conclude that simulation results lack the integrity that other empirical experiments possess since they are backed by mathematical deduction. While these rebuttals are not entirely unfounded, simulations are able to be built from the “bottom up.” This means that the foundation of the model is composed of the individual agents and the nature of their interaction and exchange behavior, which supplements the proposal that computational economists should focus on agent-based modeling, using computer simulations as a key component of those models.  @Reiss2011
+
+# Conclusion
+
+Echoing Buchanan’s sentiments, economists should focus on exchange and the mutually beneficial interaction between independent agents. Computational economists, similarly, should drill down on agent-based modeling, where they are able to develop effective models that learn, grow, and adapt to reflect real-world systems. ABMs, rooted in the exchange and interaction of disparate, autonomous agents, promote a flexible, accurate setting, free from overbearing constraints of traditional mathematical models.
+
+
+
+
+
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
